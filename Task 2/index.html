@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advanced Online Quiz Maker</title>
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+  <h1>Advanced Quiz Maker</h1>
+
+  <div id="create-quiz">
+    <h2>Create Your Quiz</h2>
+    <form id="quiz-form">
+      <input type="text" id="question" placeholder="Enter question" required>
+      <input type="text" id="option1" placeholder="Option 1" required>
+      <input type="text" id="option2" placeholder="Option 2" required>
+      <input type="text" id="option3" placeholder="Option 3" required>
+      <input type="text" id="option4" placeholder="Option 4" required>
+      <input type="number" id="correct" placeholder="Correct Option Number (1-4)" required min="1" max="4">
+      <button type="submit">Add Question</button>
+    </form>
+
+    <div id="question-list">
+      <h3>Questions Added:</h3>
+      <ul id="list"></ul>
+    </div>
+
+    <button id="start-quiz" style="margin-top: 20px;">Start Quiz</button>
+  </div>
+
+  <div id="take-quiz" style="display: none;">
+    <h2>Take Quiz</h2>
+    <p id="timer">Time Left: 60s</p>
+    <form id="take-quiz-form"></form>
+    <button id="submit-quiz" style="margin-top: 20px;">Submit Quiz</button>
+  </div>
+
+  <div id="result" style="display: none;">
+    <h2>Your Score:</h2>
+    <p id="score"></p>
+    <button id="restart">Create New Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
